@@ -1,0 +1,298 @@
+html{
+   scroll-behavior: smooth;   
+}
+
+p{
+    color: midnightblue;
+}
+
+#parrafo-2{
+    color: green;
+}
+
+.texto-32{
+    font-size: 32px;
+}
+
+.bg-steelblue{
+    background-color: steelblue;
+}
+
+.bg-skyblue{
+    background-color: skyblue;
+}
+
+.texto-20{
+    font-size: 20;
+}
+
+.text-white{
+    color: white;
+}
+
+.hijos-directos > li{
+    background-color: thistle;
+}
+
+.hijos-descendientes b{
+    background-color: thistle;
+}
+
+/* Los selectores de hermanos van a aplicar a los elementos que son hermanos y que esten por debajo del elemento de referencia */
+.hermanos-general ~ li{
+    background-color: aqua;
+}
+
+.hermanos-adyacentes + li{
+    background-color: aqua;
+}
+
+/* Selectores de atributo */
+.selectores-atributos a[href]{
+    color: orangered;
+}
+.selectores-atributos a[target="_blank"]{
+    font-weight: bold;
+}
+
+/* El comodín del * aplica el estilo si contiene la palabra en cuestión */
+.selectores-atributos a[href*="jonmircha"]{
+    font-size: 24px;
+}
+
+/* El comodín del ^ aplica el estilo si contiene el texto en cuestión al inicio*/
+.selectores-atributos a[href^="http://"]{
+    text-decoration: none;
+}
+
+/* El comodín del $ aplica el estilo si contiene el texto en cuestión al final*/
+.selectores-atributos a[href$=".com"]{
+    background-color: black;
+}
+
+/* El comodín del ~ aplica el estilo si contiene el texto en cuestión en una lista separada por espacios*/
+.selectores-atributos a[class~="cursos"]{
+    background-color: midnightblue;
+}
+
+/* El comodín del | aplica el estilo si contiene el texto en cuestión en una lista separada por espacios y que despues del texto en cuestion pueda venir un guion medio*/
+.selectores-atributos a[class|="menu"]{
+    font-style: italic;
+}
+
+/* Selector universal */
+*{
+    font-family: sans-serif;
+}
+
+.selector-universal *{
+    font-size: 24px;
+}
+
+/*
+     PSEUDOCLASES
+ */
+
+ .form-pseudoclases *:required{
+    border-color: yellow;
+ }
+
+ .form-pseudoclases *:valid{
+    border-color: green;
+ }
+
+ .form-pseudoclases *:invalid{
+    border-color: red;
+ }
+
+ .form-pseudoclases *:focus{
+    background-color: skyblue;
+ }
+
+ .form-pseudoclases *:disabled{
+    background-color: pink;
+ }
+
+ /* :link
+ :active */
+ .menu-pseudoclases a:visited{
+    color: olive;
+ }
+
+ .menu-pseudoclases a:hover{
+    color: orange;
+ }
+ .p-pseudoclases:hover{
+    font-size: 20px;
+ }
+
+ #temario-css:target{
+    background-color: lightgreen;
+ }
+
+ /* Primer hijo */
+ .lista-pseudoclases li:first-child{
+    color: green;
+ }
+
+ .lista-pseudoclases li:last-child{
+    color: violet;
+ }
+
+ .lista-pseudoclases li:nth-child(3){
+    color: navy;
+ }
+
+ /* Ira dando estilos dependiendo el numero que coloquemos  */
+ /* .lista-pseudoclases li:nth-child(4n){
+    font-size: 20px;
+ } */
+
+ /* .lista-pseudoclases li:nth-child(3n +1){
+    font-weight: bold;
+ } */
+
+ /* Esto pondra de ese color de fondo los valores pares */
+ .lista-pseudoclases li:nth-child(even){
+    background-color: yellow;
+ }
+
+ /* Esto pondra los elementos impares en color naranja */
+ .lista-pseudoclases li:nth-child(odd){
+    background-color: orange;
+ }
+
+ /* El primero en su tipo */
+ .articulo-pseudoclases p:first-of-type{
+    background-color: pink;
+ }
+
+ .articulo-pseudoclases p:last-of-type{
+    background-color: violet;
+ }
+
+ .articulo-pseudoclases p:nth-of-type(3){
+    background-color: fuchsia;
+ } 
+
+ /* Negacion */
+.articulo-pseudoclases *:not(p){
+    background-color: beige;
+}
+
+/*
+    Pseudoelementos - Dan estilos a partes especificas de un elemento, se usa el  :: para diferenciarlos de las pseudoclases
+ */
+
+ .saga-geminis::before{
+    content: '🤼‍♂️';
+ }
+
+ .saga-geminis::after{
+    content: '♊';
+ }
+
+ .saga-precio::before{
+    content: '💲';
+    font-weight: bold;
+ }
+
+ .saga-precio::after{
+    content: '💰';
+    font-weight: bold;
+ }
+
+ .p-pseudoelementos::first-letter{
+    font-size: 32px;
+    font-weight: bold;
+ }
+
+ .p-pseudoelementos::first-line{
+    color: coral;
+ }
+
+ .p-pseudoelementos::selection{
+    color: greenyellow;
+    background-color: black;
+ }
+
+ .input-pseudoelementos::placeholder{
+    color: green;
+ }
+
+ /* Agrupar selectores */
+ .form-agrupar-selectores input[type="text"],
+ .form-agrupar-selectores input[type="email"],
+ .form-agrupar-selectores textarea{
+    border-color: yellow;
+    border-width: 2px;
+    border-style: dashed;
+    background-color: black;
+    font-size: 20px;
+    display: block;
+    width: 300px;
+ }
+
+ /* 
+ El algoritmo de CSS: Es la forma en el que el navegador aplica los estilos al documento HTML.Es vital entender este concepto para que entiendas como se aplican y en algunas ocasiones se sobreeescriben las reglas CSS
+ 1) La cascada es el mecanismo en que el navegador aplica los estilos, Y toma en cuenta el siguiente orden:
+    -El User Agent(los estilos por defecto del navegador)
+    -Personalizaciones del usuario
+    -Los estilos del autor
+
+ 2) Las especificidad es el peso que tiene un selector cuando hay conflicto de estilos. Se calcula de la siguiente forma:
+ Etiquetas y pseudoelementos --------0,0,0,1
+ Clases, atributos y pseudoclases --------0,0,1,0
+ Identificadores --------0,1,0,0 
+ Estilos en línea --------1,0,0,0
+ !importnat------------Rompe la especificidad
+ 3) Herencia es la capacidad un selector de obtener (heredar) los valores de sus ancestros más cercanos para aplicarla se usa el valor inherit. siqueremos evitarla podemos asignar otro valor o inicializar la propiedad en cuestion con el valor initial
+ */
+
+ /* Práctia de especificidad */
+blockquote#cita-marco.cita-marco{
+   background-color: lightsteelblue;
+}
+
+ blockquote{
+   background-color: burlywood;
+ }
+
+ #cita-marco{
+   background-color: lightgreen;
+ }
+
+ .cita-marco{
+   background-color: mediumaquamarine !important;
+ }
+
+ blockquote.cita-marco{
+   background-color: tomato;
+ }
+
+ .cita-marco{
+   background-color: aqua;
+ }
+ blockquote#cita-marco{
+   background-color: lightsalmon;
+ }
+
+ .cita-marco{
+   background-color: moccasin;
+   background-color: darkorange !important;
+   font-size: 32px;
+   border-style: dotted;
+   border-color: red;
+ }
+
+ .cita-marco cite{
+   background-color: pink;
+   background-color: inherit;
+   font-size: 20px;
+ }
+ 
+
+
+
+
+ 

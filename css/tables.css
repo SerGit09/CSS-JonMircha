@@ -1,0 +1,15 @@
+.table{
+    font-size: 3rem;
+    border-collapse: collapse;
+    border-collapse: separate;/*Valor por defecto*/
+    /* Oculta las celdas que esten vacias */
+    empty-cells: hide;
+    empty-cells: show; /*Defecto*/
+}
+
+/* Para ponerles bordes */
+table, th,td{
+    border: medium solid black;
+    /* Para que se pueda utilizar esta propiedad, debe de estar en separate en border collapse */
+    border-spacing: 10px;
+}

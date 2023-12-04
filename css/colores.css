@@ -1,0 +1,114 @@
+.color-by-name{
+    background-color: #ff7f50;
+    color: rebeccapurple;
+    border: medium solid greenyellow;
+}
+
+/* 
+Sistema Hexadecimal
+0123456789ABCDEF
+
+RedGreenBlue(Medio Digitales) vs CyanMagentaYellowKey(Medios Impresos)
+
+Colores en HEX va a ser colores de 6 dìgitos
+FF6600
+*/
+
+.color-hex{
+    background-color: #ff6600;
+    background-color: #f60; /*Puede simplificarse pero deben de ser el mismo valor*/
+    background-color: #ff6605;
+    /* Se puede aplicar apacidad despues de los primeros 6 digitos */
+    background-color: #00000007;
+    background-color: #0002;
+    color: #12ac78;
+    border: medium solid #ffffff;
+    border: medium solid #ff0000;
+    border: medium solid #000000;
+    border: medium solid #00ff00;
+    border: medium solid #0000ff;
+}
+
+/* 
+Sistema RGB
+Acepta 8 bits por canal
+Bit(0/1) 2 elevado a la potencia 8 = 2*2*2*2*2*2*2*2 = 256
+Por cada canal de color tenemos valores que van del 0 al 255
+*/
+
+.color-rgb{
+    background-color: rgb(255,255, 255);
+    background-color: rgb(255,0, 0);
+    background-color: rgb(0,0, 255);
+    background-color: rgb(0,0, 0);
+    background-color: rgba(0,0, 0,.5);
+    color: rgb(255, 102, 0);
+    border: medium solid rgb(128, 109, 7);
+}
+
+/* 
+Sistema HSL
+HueSaturationLightness(Tono-Saturación-Luminosidad)
+El primer valor es Hue(Círculo Cromático)
+0°-> red 
+60°-> yellow
+120°-> green 
+180°-> cyan 
+240°-> blue 
+300° -> Magenta
+
+El segundo valor es Saturation(Intensidad del color)
+0% -> Escala de grises
+100% -> Color puro
+
+El tercer valor es Lightness(Luminosidad)
+0% -> Negro
+50 -> Colo puro
+100% -> Blanco
+*/
+
+.color-hsl{
+    background-color: hsl(0, 100%, 50%);
+    background-color: hsl(120, 100%, 50%);
+    background-color: hsl(240, 100%, 50%);
+    background-color: hsl(30, 100%, 50%);
+    background-color: hsla(30, 100%, 50%,.5);
+    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
+    border: medium solid greenyellow;
+}
+
+
+.color-transparent-current{
+    background-color: darkmagenta;
+    /* Le aplica un fondo negro, hereda el valor por defecto o asignado de la propiedad color, del ancestro que tenga definida esta propiedad, busca del ancestro más cercano al más alejado */
+    background-color: currentColor;
+    /* Le quita el color, es igual aplicar rgba(0,0,0,0) */
+    background-color: transparent;
+    color: olive;
+    border: thick solid currentColor;
+}
+
+.opacity{
+    background-color: orchid;
+    color: navy;
+    border: thick solid #000;
+    opacity: 0.75;
+}
+
+.opacity-0{
+    opacity: 0;
+}
+
+.opacity-10{
+    opacity: .1;
+}
+
+.opacity-20{
+    opacity: .2;
+}
+
+.opacity-30{
+    opacity: .3;
+}
+

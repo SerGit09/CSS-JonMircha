@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <article id="temario-css">
+        <h1>Aprendiendo CSS</h1>
+
+        <h2>Temario del curso</h2>
+
+        <ul>
+            <li><a href="index.html#selectores-basicos">Selectores básicos</a></li>
+            <li><a href="index.html#selectores-avanzados">Selectores Avanzados</a></li>
+            <li><a href="index.html#pseudoclases">Pseudoclases</a></li>
+            <li><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
+            <li><a href="index.html#agrupar-selectores">Agrupar selectores</a></li>
+            <li><a href="index.html#algoritmo-css">El algoritmo de css</a></li>
+            <li><a href="index.html#reseteo-normalizacion-estilos">Reseteo y Normalización de estilos</a></li>
+            <li><a href="index.html#prefijos-navegadores">Prefijos de los navegadores</a></li>
+            <li><a href="box-model.html">Modelo de caja</a></li>
+            <li><a href="positions.html">Posicionamiento</a></li>
+            <li><a href="position-examples.html">Ejercicios de Posicionamiento CSS</a></li>
+            <li><a href="colores.html">Colores en HTML</a></li>
+            <li><a href="unidades.html">Unidades de Medida en CSS</a></li>
+            <li><a href="variables-functions.html">Variables y Funciones en CSS</a></li>
+            <li><a href="fonts-texts.html">Estilos de fuentes y Textos</a></li>
+            <li><a href="border-outline.html">Bordes y Outlines</a></li>
+            <li><a href="backgrounds.html">Fondos en CSS</a></li>
+            <li><a href="images.html">Imagenes en CSS</a></li>
+            <li><a href="list.html">Listas en CSS</a></li>
+            <li><a href="tables.html">Tablas en CSS</a></li>
+            <li><a href="forms.html">Formularios en CSS</a></li>
+            <li><a href="visual-effects.html">Efectos visuales en CSS</a></li>
+            <li><a href="scroll-one-page.html">Efectos con Scroll (<small>Sitio One Page</small>) </a></li>
+            <li><a href="scroll-snap-slide.html">Ajuste del Scroll (<small>Slides</small>) </a></li>
+            <li><a href="motion.html">Movimientos en CSS</a></li>
+            <li><a href="index.html"></a></li>
+        </ul>
+    </article>
+    <hr>
+
+    <article id="selectores-basicos">
+        <h2>Selectores básicos</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus suscipit quisquam eligendi obcaecati,
+            esse nam ratione magni nobis maiores architecto numquam consequatur impedit cum dolor laboriosam. Possimus
+            repellat ab iusto.</p>
+        <p id="parrafo-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quisquam aliquam voluptatem deserunt repellat
+            optio nostrum expedita, at vitae, quod pariatur modi reprehenderit dolores facere in rem? Ducimus, provident
+            ab?
+        </p>
+        <p class="texto-32 bg-skyblue">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nobis explicabo cum consectetur
+            excepturi molestias magni, quam eos assumenda iusto ipsum tenetur dignissimos nulla similique incidunt quos.
+            Impedit, tenetur illum.
+        </p>
+        <p class="texto-20 bg-steelblue text-white">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque vel quas iste tempore, deserunt assumenda
+            magnam fugit optio repellat aliquam laboriosam voluptatem dignissimos pariatur dolorum excepturi saepe quos
+            in. Necessitatibus?
+        </p>
+        <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr>
+
+    <article id="selectores-avanzados">
+        <h2>Selectores avanzados</h2>
+        <h3>Selectores de hijos</h3>
+        <h4>Selector de hijos directo</h4>
+        <ul class="hijos-directos">
+            <li><b>Primavera</b></li>
+            <li><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+        <h4>Selector de hijos descendientes</h4>
+
+        <ul class="hijos-descendientes">
+            <li><b>Primavera</b></li>
+            <li><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+
+        <h3>Selectores de hermanos</h3>
+        <h4>Selector de hermanos (En general)</h4>
+        <ul>
+            <li><b>Primavera</b></li>
+            <li class="hermanos-general"><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+        <h4>Selector de hermanos adyacentes</h4>
+        <ul>
+            <li><b>Primavera</b></li>
+            <li class="hermanos-adyacentes"><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+        <h3>Selectores de atributos</h3>
+        <nav class="selectores-atributos">
+            <ul>
+                <li><a href="https://jonmircha.com" target="_BLANK">Inicio</a></li>
+                <li><a class="menu-item cursos button" href="https://jonmircha.com/cursos" target="_BLANK">Cursos</a>
+                </li>
+                <li><a href="http://jonmircha.com/blog" target="_BLANK">Blog</a></li>
+                <li><a class="menu-item notas button" href="http://jonmircha.com/notas" target="_BLANK">Notas</a></li>
+                <li><a href="https://jonmircha.com/cv" target="_BLANK">CV</a></li>
+                <li><a class="menu-item ahora button" href="https://jonmircha.com/ahora" target="_BLANK">Ahora</a></li>
+                <li><a href="index.html#temario-css">Regresar al temario</a></li>
+
+            </ul>
+        </nav>
+        <h3>Selector Universal *</h3>
+        <ul class="selector-universal">
+            <li><b>Primavera</b></li>
+            <li><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+        <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr>
+
+    <article id="pseudoclases">
+        <h2>Pseudoclases</h2>
+        <form action="" class="form-pseudoclases">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
+            <br>
+            <input type="email" name="correo" placeholder="Escribe tu correo" required>
+            <br>
+            <input type="submit" value="Enviar" disabled>
+        </form>
+        <nav class="menu-pseudoclases">
+            <a href="#seccion1">Seccion 1</a>
+            <a href="#seccion2">Seccion 2</a>
+            <a href="#seccion3">Seccion 3</a>
+            <a href="#seccion4">Seccion 4</a>
+        </nav>
+        <p class="p-pseudoclases">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, vitae ad corporis
+            voluptatem velit quidem doloribus! Quibusdam quos autem assumenda et magni, ipsum, tenetur dolore tempora
+            minus magnam, placeat sit.
+        </p>
+        <ol class="lista-pseudoclases">
+            <li>Mú de Aries</li>
+            <li>Aldebarán de Tauro</li>
+            <li>Saga & Kanon de Géminis</li>
+            <li>Death Mask de Cáncer</li>
+            <li>Aioria de Leo</li>
+            <li>Shaka de Virgo</li>
+            <li>Dohko de Libra</li>
+            <li>Milo de Escorpion</li>
+            <li>Aioros de Sagitario</li>
+            <li>Shura de Capricornio</li>
+            <li>Camus de Acuario</li>
+            <li>Afordita de Piscis</li>
+        </ol>
+        <article class="articulo-pseudoclases">
+            <header>Esta es una header</header>
+            <p>Esto es un p</p>
+            <div>Esto es una div</div>
+            <p>Esto es un p</p>
+            <section>Esto es una seccion</section>
+            <p>Esto es un p</p>
+            <div>Esto es un div</div>
+            <p>Esto es un p</p>
+            <footer>Esto es un footer</footer>
+        </article>
+        <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr>
+    <article id="pseudoelementos">
+        <h2>Pseudoelementos</h2>
+        <p>
+            <i>Bandai Myth Cloth Ex <span class="saga-geminis">Saga de Géminis</span> <span
+                    class="saga-precio">500</span></i>
+        </p>
+        <p class="p-pseudoelementos">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde dignissimos saepe eos at, quod ipsa
+            reiciendis aperiam harum natus sequi optio sit vero inventore. Dignissimos non suscipit corrupti deleniti.
+        </p>
+        <input class="input-pseudoelementos" type="text" name="nombre" placeholder="Escribe tu nombre">
+        <a href="index.html#temario-css">☝️</a>
+    </article>
+
+    <article id="agrupar-selectores">
+        <h2>Agrupar Selectores</h2>
+        <form class="form-agrupar-selectores">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre">
+            <input type="email" name="correo" id="" placeholder="Escribe tu correo">
+            <textarea name="comentarios" placeholder="Escribe tus comentarios" cols="30" rows="10"></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+
+        <a href="index.html#temario-css">☝️</a>
+
+    </article>
+
+    <article id="algoritmo-css">
+        <h2>El algoritmo de CSS</h2>
+        <ol>
+            <li>La cáscada</li>
+            <li>La Especificidad</li>
+            <li>La Herencia</li>
+        </ol>
+        <blockquote style="background-color: rebeccapurple;" id="cita-marco" class="cita-marco">
+            Sé tolerante con los demás y estricto contigo mismo - <cite>Marco Aurelio</cite>
+        </blockquote>
+        <a href="index.html#temario-css">☝️</a>
+
+    </article>
+
+    <article id="reseteo-normalizacion-estilos">
+        <h2>Reseteo y Normalización de Estilos</h2>
+        <a href="index.html#temario-css">☝️</a>
+    </article>
+
+    <article id="prefijos-navegadores">
+        <h2>Prefijos de los navegadores</h2>
+        <uli>
+            <li>Navegadores de Microsoft <code><b>-ms-</b></code></li>
+            <li>Firefox <code><b>-moz-</b></code></li>
+            <li>Todos los demás navegadores <code><b>-webkit-</b></code></li>
+        </uli>
+        <a href="index.html#temario-css">☝️</a>
+    </article>
+
+
+    <!-- <a href="index.html#temario-css">☝️</a> -->
+
+</body>
+
+</html>

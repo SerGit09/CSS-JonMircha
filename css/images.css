@@ -1,0 +1,26 @@
+img{
+    max-width: 100%;
+    height: auto;
+    /* display: block; */
+}
+
+.card{
+    border: medium solid black;
+    width: 400px;
+    height: 400px;
+}
+
+.card img{
+    background-color: blueviolet;
+    height: 300px;
+    /* Estas propiedades para evitar que las imagenes se deformen */
+    object-fit: fill; /*Valor por defecto*/
+    object-fit: cover;
+    object-fit: contain;
+    object-fit: none;
+    object-fit: scale-down; /*Toma el valor que sea menor de los valores contain y none*/
+    object-position: left top;
+    object-position: left top;
+    object-position: 50% 50%;
+    object-position: -40px center;
+}
